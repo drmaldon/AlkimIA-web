@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlkimIA - Inteligencia Artificial de impacto</title>
+    <!-- Carga de Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Color de fondo ligero */
+            color: #334155; /* Color de texto principal */
+        }
+        .btn-primary {
+            @apply bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out font-semibold;
+        }
+        .btn-secondary {
+            @apply bg-gray-200 text-blue-600 px-6 py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-300 ease-in-out font-semibold;
+        }
+        .section-title {
+            @apply text-4xl font-bold text-center text-blue-800 mb-12;
+        }
+        .card {
+            @apply bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out border border-gray-100;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sección de Cabecera (Header) -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo o Nombre de la Comunidad -->
+            <a href="#inicio" class="text-2xl font-bold text-blue-800">
+                Alkim<span class="text-blue-600">IA</span>
+            </a>
+            <!-- Navegación Principal -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#para-pymes" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">Para PYMES</a>
+                <a href="#para-comunidad" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">Para la Comunidad</a>
+                <a href="#catalogo" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">Catálogo</a>
+                <a href="#contacto" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">Contacto</a>
+            </div>
+            <!-- Botón de Menú para Móviles (ejemplo, se puede expandir con un menú hamburguesa) -->
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Espacio para el header fijo -->
+    <div class="pt-16"></div>
+
+    <!-- Sección Hero (Punto de Partida: Home) -->
+    <section id="inicio" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                La IA al Alcance de tu <span class="text-yellow-300">PYME</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+                Conectamos tu empresa con soluciones de datos personalizadas y el talento de la ciencia de datos para impulsar tu competitividad.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#para-pymes" class="btn-primary bg-yellow-400 hover:bg-yellow-500 text-blue-800">
+                    Transforma tu PYME
+                </a>
+                <a href="#para-comunidad" class="btn-secondary bg-white hover:bg-gray-100 text-blue-600">
+                    Únete a la Comunidad de Expertos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Cómo Funciona" (Desplazándote hacia abajo en la Home) -->
+    <section id="como-funciona" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Cómo Funciona</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Paso 1 -->
+                <div class="card p-6">
+                    <div class="text-blue-600 mb-4">
+                        <!-- Icono de Búsqueda/Identificación -->
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Identifica tu Desafío</h3>
+                    <p class="text-gray-600">Comprendemos tus necesidades y los problemas específicos que la IA puede resolver en tu PYME.</p>
+                </div>
+                <!-- Paso 2 -->
+                <div class="card p-6">
+                    <div class="text-blue-600 mb-4">
+                        <!-- Icono de Conexión/Red -->
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Conexión con Expertos</h3>
+                    <p class="text-gray-600">Te conectamos con científicos de datos y desarrolladores de nuestra comunidad.</p>
+                </div>
+                <!-- Paso 3 -->
+                <div class="card p-6">
+                    <div class="text-blue-600 mb-4">
+                        <!-- Icono de Solución/Engranaje -->
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Solución y Soporte</h3>
+                    <p class="text-gray-600">Co-creamos e implementamos la solución en nuestros ambientes, brindando soporte continuo para tu éxito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Beneficios Clave" (Desplazándote hacia abajo en la Home) -->
+    <section id="beneficios-home" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Beneficios Clave de Nuestra Plataforma</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4 text-blue-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.928 12c0 3.065 1.054 5.866 2.768 8.132a12.007 12.007 0 0015.342 0c1.714-2.266 2.768-5.067 2.768-8.132 0-1.21-.25-2.378-.732-3.464S18.068 5.8 17.072 4.984z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-1">Soluciones a Medida</h3>
+                            <p class="text-gray-600">Entendemos las necesidades únicas de las PYMES y ofrecemos un catálogo de productos de IA listo a usarse, ajustado a tu presupuesto y objetivos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4 text-blue-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-1">Resultados Tangibles</h3>
+                            <p class="text-gray-600">Nos enfocamos en generar un impacto real en tu negocio: mayor eficiencia, reducción de costos y nuevas oportunidades de crecimiento.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4 text-blue-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20h-2m-3 0v-2m-7 0V2m10 0h2a2 2 0 012 2v2m-6 0h-2a2 2 0 00-2 2v2m-3 0H2m12 0h2m-4 0h-4m-6 0H2"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-1">Acceso a Expertos</h3>
+                            <p class="text-gray-600">Conéctate con una comunidad de profesionales en datos e IA, listos para compartir su conocimiento y experiencia.</p>
+                        </div>
+                    </div>
+                    <!-- Nuevo item: Co-creación -->
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-4 text-blue-600">
+                            <!-- Icono de Co-creación/Colaboración (dos personas) -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20h-2m-3 0v-2m-7 0V2m10 0h2a2 2 0 012 2v2m-6 0h-2a2 2 0 00-2 2v2m-3 0H2m12 0h2m-4 0h-4m-6 0H2"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-700 mb-1">Co-creación</h3>
+                            <p class="text-gray-600">Impulsamos una comunidad de expertos y estudiantes que construyan soluciones de datos a la medida de las Pymes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://placehold.co/600x400/e0f2fe/1e40af?text=Beneficios+para+PYMES" alt="" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Para PYMES" (Escenario 1) -->
+    <section id="para-pymes" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Impulsa tu Competitividad: IA a tu Medida</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="space-y-8">
+                    <!-- Acceso a Inteligencia de Datos Asequible -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Acceso a Inteligencia de Datos Asequible</h3>
+                        <p class="text-gray-600">Democratizamos el acceso a la analítica avanzada y la inteligencia artificial, haciendo que soluciones de alto impacto sean accesibles para tu PYME, sin grandes inversiones iniciales.</p>
+                    </div>
+                    <!-- Ventaja Competitiva Real -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Ventaja Competitiva Real</h3>
+                        <p class="text-gray-600">Obtén la capacidad de predecir tendencias, optimizar operaciones y personalizar la experiencia del cliente, superando a la competencia con decisiones basadas en datos.</p>
+                    </div>
+                    <!-- Soluciones Prácticas y Orientadas a Resultados -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Soluciones Prácticas y Orientadas a Resultados</h3>
+                        <p class="text-gray-600">Nos enfocamos en problemas reales de tu negocio, desarrollando soluciones que generan un retorno de inversión claro y medible desde el primer día.</p>
+                    </div>
+                    <!-- Menor Barrera de Entrada -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Menor Barrera de Entrada</h3>
+                        <p class="text-gray-600">No necesitas ser un experto en tecnología. Nuestro equipo te guía en cada paso, desde la identificación del problema hasta la implementación y el uso de la solución.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/500x350/e0f7fa/00796b?text=IA+a+tu+Medida" alt="" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+
+            <!-- El "Viaje hacia la IA" -->
+            <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Tu Viaje hacia la IA</h3>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-center mb-16">
+                <div class="p-4 rounded-lg bg-blue-50">
+                    <div class="text-blue-600 mb-3"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div>
+                    <p class="font-semibold text-blue-700">1. Identifica tu Desafío</p>
+                </div>
+                <div class="p-4 rounded-lg bg-blue-50">
+                    <div class="text-blue-600 mb-3"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+                    <p class="font-semibold text-blue-700">2. Conéctate con Nosotros</p>
+                </div>
+                <div class="p-4 rounded-lg bg-blue-50">
+                    <div class="text-blue-600 mb-3"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
+                    <p class="font-semibold text-blue-700">3. Co-creación y Desarrollo</p>
+                </div>
+                <div class="p-4 rounded-lg bg-blue-50">
+                    <div class="text-blue-600 mb-3"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                    <p class="font-semibold text-blue-700">4. Acceso y Uso</p>
+                </div>
+                <div class="p-4 rounded-lg bg-blue-50">
+                    <div class="text-blue-600 mb-3"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <p class="font-semibold text-blue-700">5. Evalúa y Optimiza</p>
+                </div>
+            </div>
+
+            <!-- CTAs Onboarding -->
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
+                <a href="#contacto" class="btn-primary">
+                    Agenda una Reunión Personalizada
+                </a>
+                <a href="#catalogo" class="btn-secondary">
+                    Explora Productos/Proyectos Disponibles
+                </a>
+            </div>
+
+            <!-- Sección de Casos de Éxito para PYMES -->
+            <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Casos de Éxito</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">Optimización de Inventario en Retail</h4>
+                    <p class="text-gray-600 mb-4">Implementamos un modelo predictivo que redujo el exceso de inventario en un 20% y mejoró la disponibilidad de productos clave.</p>
+                    <img src="https://placehold.co/300x200/cfe2f3/1a237e?text=Caso+Retail" alt="" class="rounded-lg mb-2 w-full h-auto">
+                    <a href="#detalle-producto" class="text-blue-600 hover:underline text-sm">Ver Detalle</a>
+                </div>
+                <div class="card">
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">Personalización en E-commerce</h4>
+                    <p class="text-gray-600 mb-4">Desarrollamos un sistema de recomendación que aumentó la tasa de conversión en un 15% para una tienda online.</p>
+                    <img src="https://placehold.co/300x200/cfe2f3/1a237e?text=Caso+E-commerce" alt="" class="rounded-lg mb-2 w-full h-auto">
+                    <a href="#detalle-producto" class="text-blue-600 hover:underline text-sm">Ver Detalle</a>
+                </div>
+                <div class="card">
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">Análisis Predictivo para Servicios</h4>
+                    <p class="text-gray-600 mb-4">Un modelo de predicción de churn que ayudó a una empresa de servicios a retener un 10% más de sus clientes.</p>
+                    <img src="https://placehold.co/300x200/cfe2f3/1a237e?text=Caso+Servicios" alt="" class="rounded-lg mb-2 w-full h-auto">
+                    <a href="#detalle-producto" class="text-blue-600 hover:underline text-sm">Ver Detalle</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Para la Comunidad" (Escenario 2) -->
+    <section id="para-comunidad" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Sé Parte de la Revolución de Datos: Tu Talento Hace la Diferencia</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/500x350/e0e0e0/424242?text=Colaboración+y+Datos" alt="" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+                <div class="space-y-8">
+                    <!-- Experiencia Profesional y Portafolio Robusto -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Experiencia Profesional y Portafolio Robusto</h3>
+                        <p class="text-gray-600">Trabaja en proyectos reales con PYMES, construyendo un portafolio sólido que te abrirá puertas en la industria de datos e IA.</p>
+                    </div>
+                    <!-- Mentoreo por Expertos en la Industria -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Mentoreo por Expertos en la Industria</h3>
+                        <p class="text-gray-600">Aprende de profesionales experimentados, recibe retroalimentación y acelera tu desarrollo profesional con el apoyo de la comunidad.</p>
+                    </div>
+                    <!-- Visibilidad y Reconocimiento -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Visibilidad y Reconocimiento</h3>
+                        <p class="text-gray-600">Tus contribuciones serán reconocidas. Destaca tu perfil y conecta con potenciales empleadores o colaboradores.</p>
+                    </div>
+                    <!-- Potencial de Monetización y Compensación -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Potencial de Monetización y Compensación</h3>
+                        <p class="text-gray-600">Accede a oportunidades para monetizar tus habilidades y recibir compensación por los proyectos en los que participes.</p>
+                    </div>
+                    <!-- Impacto Social y Económico en PYMES -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Impacto Social y Económico en PYMES</h3>
+                        <p class="text-gray-600">Contribuye al crecimiento de pequeñas y medianas empresas, generando un impacto positivo real en la economía y la sociedad.</p>
+                    </div>
+                    <!-- Acceso a una Red de Talento y Colaboración -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Acceso a una Red de Talento y Colaboración</h3>
+                        <p class="text-gray-600">Únete a una vibrante comunidad de científicos de datos, desarrolladores y entusiastas, fomentando el aprendizaje y la colaboración.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cómo Participar -->
+            <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Cómo Participar</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+                <div class="card p-6">
+                    <div class="text-blue-600 text-5xl font-bold mb-4">1</div>
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">Regístrate</h4>
+                    <p class="text-gray-600">Crea tu perfil y presenta tus habilidades y experiencia en datos e IA.</p>
+                </div>
+                <div class="card p-6">
+                    <div class="text-blue-600 text-5xl font-bold mb-4">2</div>
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">Explora Proyectos</h4>
+                    <p class="text-gray-600">Navega por nuestro catálogo de desafíos de PYMES y encuentra proyectos que te interesen.</p>
+                </div>
+                <div class="card p-6">
+                    <div class="text-blue-600 text-5xl font-bold mb-4">3</div>
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">Colabora y Contribuye</h4>
+                    <p class="text-gray-600">Trabaja en equipo con otros expertos para desarrollar soluciones innovadoras.</p>
+                </div>
+            </div>
+
+            <!-- CTA para la Comunidad -->
+            <div class="text-center mb-16">
+                <a href="#registro-comunidad" class="btn-primary">
+                    Únete Ahora a la Comunidad
+                </a>
+                <a href="#catalogo" class="btn-secondary ml-4">
+                    Explora Proyectos Disponibles
+                </a>
+            </div>
+
+            <!-- Sección de Testimonios de la Comunidad -->
+            <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Testimonios de la Comunidad</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <p class="text-gray-700 italic mb-4">"Participar en AlkimIA me ha permitido aplicar mis conocimientos en proyectos reales y aprender de otros profesionales. ¡Una experiencia invaluable!"</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/60x60/cbd5e1/475569?text=RA" alt="" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-blue-700">Ricardo A.</p>
+                            <p class="text-sm text-gray-500">Científico de Datos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="text-gray-700 italic mb-4">"He encontrado proyectos desafiantes y he podido contribuir al éxito de PYMES, lo cual es muy gratificante. La red de contactos es excelente."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/60x60/cbd5e1/475569?text=LV" alt="" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-blue-700">Laura V.</p>
+                            <p class="text-sm text-gray-500">Desarrolladora de IA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Catálogo de Soluciones" (Escenario 3) -->
+    <section id="catalogo" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Descubre Soluciones de IA a Medida para tu Negocio</h2>
+
+            <!-- Barra de Búsqueda y Filtros (Funcionalidad Principal) -->
+            <div class="flex flex-col md:flex-row gap-6 mb-12">
+                <!-- Barra de Búsqueda -->
+                <div class="w-full md:w-2/3">
+                    <input type="text" placeholder="Buscar soluciones por palabra clave..." class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <!-- Filtros (simulados) -->
+                <div class="w-full md:w-1/3 flex flex-col sm:flex-row gap-4">
+                    <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Industria</option>
+                        <option value="retail">Retail</option>
+                        <option value="turismo">Turismo</option>
+                        <option value="manufactura">Manufactura</option>
+                        <option value="servicios">Servicios</option>
+                    </select>
+                    <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Tipo de Problema</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="operaciones">Operaciones</option>
+                        <option value="ventas">Ventas</option>
+                        <option value="rrhh">Recursos Humanos</option>
+                    </select>
+                    <select class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Tipo de Producto</option>
+                        <option value="dashboard">Dashboard</option>
+                        <option value="modelo-predictivo">Modelo Predictivo</option>
+                        <option value="api">API</option>
+                        <option value="dataset">Dataset</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Listado de Productos/Proyectos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Producto/Proyecto 1 -->
+                <a href="#detalle-producto" class="card block">
+                    <img src="https://placehold.co/400x250/d1e7dd/0f5132?text=Dashboard+Inventario" alt="" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Dashboard de Optimización de Inventario</h3>
+                    <p class="text-gray-600 mb-3 text-sm">Resuelve el problema de la gestión ineficiente de stock en el sector retail.</p>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Disponible</span>
+                </a>
+                <!-- Tarjeta de Producto/Proyecto 2 -->
+                <a href="#detalle-producto" class="card block">
+                    <img src="https://placehold.co/400x250/d1e7dd/0f5132?text=Modelo+Churn" alt="" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Modelo de Predicción de Abandono (Churn)</h3>
+                    <p class="text-gray-600 mb-3 text-sm">Identifica clientes en riesgo de irse para implementar estrategias de retención.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">En Desarrollo</span>
+                </a>
+                <!-- Tarjeta de Producto/Proyecto 3 -->
+                <a href="#detalle-producto" class="card block">
+                    <img src="https://placehold.co/400x250/d1e7dd/0f5132?text=Chatbot+Soporte" alt="" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Chatbot de Soporte al Cliente</h3>
+                    <p class="text-gray-600 mb-3 text-sm">Automatiza respuestas a preguntas frecuentes y mejora la atención 24/7.</p>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Disponible</span>
+                </a>
+                <!-- Tarjeta de Producto/Proyecto 4 -->
+                <a href="#detalle-producto" class="card block">
+                    <img src="https://placehold.co/400x250/d1e7dd/0f5132?text=Sistema+Recomendación" alt="" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Sistema de Recomendación de Productos</h3>
+                    <p class="text-gray-600 mb-3 text-sm">Aumenta las ventas cruzadas y la personalización en plataformas e-commerce.</p>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Disponible</span>
+                </a>
+                <!-- Tarjeta de Producto/Proyecto 5 -->
+                <a href="#detalle-producto" class="card block">
+                    <img src="https://placehold.co/400x250/d1e7dd/0f5132?text=Análisis+Sentimientos" alt="" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Análisis de Sentimientos en Redes Sociales</h3>
+                    <p class="text-gray-600 mb-3 text-sm">Monitorea la percepción de tu marca y productos en plataformas digitales.</p>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">En Desarrollo</span>
+                </a>
+                <!-- Tarjeta de Producto/Proyecto 6 -->
+                <a href="#detalle-producto" class="card block">
+                    <img src="https://placehold.co/400x250/d1e7dd/0f5132?text=Optimización+Precios" alt="" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Modelo de Optimización Dinámica de Precios</h3>
+                    <p class="text-gray-600 mb-3 text-sm">Ajusta precios en tiempo real para maximizar ingresos y competitividad.</p>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Disponible</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Detalle de Producto/Proyecto Específico" (Escenario 4) -->
+    <section id="detalle-producto" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Dashboard de Optimización de Inventario para Retail</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4">Problema que Resuelve</h3>
+                    <p class="text-gray-600 mb-6">
+                        Muchos negocios minoristas luchan con la gestión de inventario, lo que lleva a excesos de stock, productos agotados y pérdidas de ventas. Este dashboard aborda la ineficiencia, permitiendo una visión clara y en tiempo real del inventario.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4">Solución de IA Propuesta</h3>
+                    <p class="text-gray-600 mb-6">
+                        Utiliza algoritmos de machine learning para analizar datos históricos de ventas, estacionalidad, promociones y factores externos, prediciendo la demanda futura. El dashboard visualiza estas predicciones, sugiere puntos de reorden y optimiza los niveles de stock para maximizar la rentabilidad y minimizar las pérdidas.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4">Datos Requeridos</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Historial de ventas (cantidad, fecha, producto, precio).</li>
+                        <li>Datos de inventario actual (cantidad, ubicación).</li>
+                        <li>Información de proveedores y tiempos de entrega).</li>
+                        <li>Datos de promociones y eventos especiales).</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4">Previsualización / Demo</h3>
+                    <img src="https://placehold.co/600x400/c8e6c9/2e7d32?text=Demo+Dashboard" alt="" class="rounded-lg shadow-xl max-w-full h-auto">
+                    <p class="text-sm text-gray-500 mt-2">Haz clic en la imagen para ver una demo interactiva (simulada).</p>
+                </div>
+            </div>
+
+            <!-- Secciones Condicionales (simuladas) -->
+            <div class="bg-blue-100 p-8 rounded-xl shadow-inner mb-12">
+                <h3 class="text-2xl font-semibold text-blue-800 mb-4">Para PYMES: Acceder a la Solución</h3>
+                <p class="text-gray-700 mb-4">
+                    Este producto está <strong>Disponible</strong>. Ofrecemos modelos de suscripción flexibles y opciones de pago por uso adaptadas a tu volumen de negocio.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="btn-primary bg-green-600 hover:bg-green-700">Acceder a la Solución</button>
+                    <button class="btn-secondary">Ver Planes y Precios</button>
+                </div>
+            </div>
+
+            <div class="bg-yellow-100 p-8 rounded-xl shadow-inner mb-12">
+                <h3 class="text-2xl font-semibold text-yellow-800 mb-4">Para la Comunidad: Participa en este Proyecto</h3>
+                <p class="text-gray-700 mb-4">
+                    Este proyecto está actualmente <strong>En Desarrollo</strong>. Buscamos expertos en:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Python (Pandas, Scikit-learn)</li>
+                    <li>Visualización de Datos (Power BI, Tableau)</li>
+                    <li>Modelado Predictivo (Series de Tiempo)</li>
+                </ul>
+                <button class="btn-primary bg-yellow-600 hover:bg-yellow-700 text-yellow-900">Participa en este Proyecto</button>
+            </div>
+
+            <!-- Sistema de Calificación y Reseñas -->
+            <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Calificaciones y Reseñas</h3>
+            <div class="card p-6 mb-8">
+                <div class="flex items-center mb-4">
+                    <span class="text-3xl font-bold text-yellow-500 mr-2">4.8</span>
+                    <div class="flex text-yellow-500">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <span class="text-gray-600">(120 reseñas)</span>
+                </div>
+                <!-- Reseña 1 -->
+                <div class="mb-4 pb-4 border-b border-gray-200">
+                    <p class="font-semibold text-blue-700">Ana G.</p>
+                    <div class="flex text-yellow-500 mb-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.683-1.545 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.79.565-1.845-.197-1.545-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700">"El equipo de AlkimIA es muy profesional. Nos ayudaron a entender cómo la IA podía beneficiarnos y el resultado fue excelente."</p>
+                </div>
+                <button class="btn-secondary w-full">Calificar esta Solución</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto (existente) -->
+    <section id="contacto" class="py-20 bg-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">¿Listo para Transformar tu Negocio?</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto">
+                Contáctanos hoy mismo para una consulta gratuita y descubre cómo la analítica de datos y la IA pueden impulsar tu PYME.
+            </p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg text-gray-800">
+                <div class="mb-6">
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu Empresa (Opcional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-500">
+                </div>
+                <div class="mb-6">
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu Mensaje o Consulta" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full bg-blue-600 hover:bg-blue-700">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección de Registro de la Comunidad -->
+    <section id="registro-comunidad" class="py-20 bg-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">¿Quieres ser parte de la Revolución de Datos?</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto opacity-90">
+                Únete a nuestra red de expertos y estudiantes para colaborar en proyectos de IA con PYMES y hacer crecer tu carrera.
+            </p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg text-gray-800">
+                <div class="mb-6 text-left">
+                    <label for="reg-nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo:</label>
+                    <input type="text" id="reg-nombre" name="nombre_completo" placeholder="Tu Nombre Completo" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="reg-email" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
+                    <input type="email" id="reg-email" name="correo_electronico" placeholder="Tu Correo Electrónico" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="reg-celular" class="block text-gray-700 text-sm font-bold mb-2">Celular:</label>
+                    <input type="tel" id="reg-celular" name="celular" placeholder="Tu Número de Celular" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="reg-perfil" class="block text-gray-700 text-sm font-bold mb-2">Perfil:</label>
+                    <select id="reg-perfil" name="perfil" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Selecciona tu perfil</option>
+                        <option value="ingeniero_datos">Ingeniero de Datos</option>
+                        <option value="cientifico_datos">Científico de Datos</option>
+                        <option value="visualizador_datos">Visualizador de Datos</option>
+                        <option value="lider_proyecto">Líder del proyecto</option>
+                    </select>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="reg-conocimiento" class="block text-gray-700 text-sm font-bold mb-2">Nivel de conocimiento:</label>
+                    <select id="reg-conocimiento" name="nivel_conocimiento" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Selecciona tu nivel</option>
+                        <option value="estudiante_universitario">Estudiante Universitario</option>
+                        <option value="profesional">Profesionales</option>
+                        <option value="profesional_experiencia">Profesional con Experiencia</option>
+                        <option value="mentor">Mentor</option>
+                    </select>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="reg-incentivo" class="block text-gray-700 text-sm font-bold mb-2">Detalla tu incentivo de pertenecer a la comunidad datos:</label>
+                    <textarea id="reg-incentivo" name="incentivo" rows="5" placeholder="Cuéntanos qué te motiva a unirte..." class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full bg-blue-600 hover:bg-blue-700">
+                    Registrarme en la Comunidad
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección de Pie de Página (Footer) -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <a href="#inicio" class="text-2xl font-bold text-white">
+                    Alkim<span class="text-blue-400">IA</span>
+                </a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-white transition duration-200">Privacidad</a>
+                <a href="#" class="hover:text-white transition duration-200">Términos</a>
+                <a href="#" class="hover:text-white transition duration-200">FAQs</a>
+            </div>
+            <div class="flex justify-center space-x-4 mb-6">
+                <!-- Iconos de Redes Sociales (ejemplo con SVG simple o Font Awesome si se carga) -->
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.424 1.745C13.623.905 15.209 1.345 16 2.505c.791 1.16 1.205 2.745.365 3.944L14.047 8.35c-1.16.791-2.745.365-3.535-.791-.79-1.16-.365-2.745.791-3.535l2.05-1.48zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.31 9.124a1.5 1.5 0 00-2.122-2.122l-4.5 4.5a1.5 1.5 0 002.122 2.122l4.5-4.5z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.921a8.18 8.18 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.222 8.222 0 01-2.606.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.109 4.109 0 001.27 5.477A4.072 4.072 0 012 10.72c-.004.052-.004.104-.004.156A4.102 4.102 0 005.625 14.126a4.108 4.108 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.843"></path></svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2025 AlkimIA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
